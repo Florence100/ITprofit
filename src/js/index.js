@@ -1,3 +1,3 @@
 import '../scss/main.scss';
+import './formValidation.js';
 
-console.log('Webpack and SCSS are working!');
