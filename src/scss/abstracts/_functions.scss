@@ -1,0 +1,10 @@
+@use "sass:color";
+@function lighter($color, $tone) {
+    $adjust: 16*$tone;
+    @return color.adjust($color, $red: $adjust, $green: $adjust, $blue: $adjust);
+}
+
+@function darker($color, $tone) {
+    $adjust: -16*$tone;
+    @return color.adjust($color, $red: $adjust, $green: $adjust, $blue: $adjust);
+}

@@ -1,0 +1,67 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+html {
+    font-size: 16px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: $bg_color;
+    font-size: 1rem;
+    color: $text_color;
+    line-height: $line_height_base;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    @media (max-width: $breakpoint_small) {
+        line-height: $line_height_small;
+    }
+}
+
+.content {
+    width: $content-width;
+    max-width: $content_max_width_xlarge;
+    padding: $spacing_xlarge;
+    
+    @media (max-width: $breakpoint_xlarge) {
+        max-width: $content_max_width_xlarge;
+    }
+    
+    @media (max-width: $breakpoint_large) {
+        max-width: $content_max_width_large;
+        padding: $spacing_large;
+    }
+    
+    @media (max-width: $breakpoint_medium) {
+        max-width: $content_max_width_medium;
+        padding: $spacing_medium;
+    }
+    
+    @media (max-width: $breakpoint_small) {
+        width: $content_width_small;
+        max-width: $content_width_small;
+        padding: $spacing_small;
+    }
+}
+
+section {
+    @include flex-center;
+    @include flex-column;
+    background-color: $secondary_bg_color;
+}
+
+h3 {
+    font-size: $font_size_xxlarge;
+
+    @media (max-width: $breakpoint_medium) {
+        font-size: $font_size_xlarge;
+        text-align: center;
+    }
+
+    @media (max-width: $breakpoint_small) {
+        font-size: $font_size_large;
+    }
+}

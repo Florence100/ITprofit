@@ -40,9 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
         let isValid = true;
 
         Object.keys(fields).forEach(field => {
-        if (!validateField(field, data[field])) {
-            isValid = false;
-        }
+            if (!validateField(field, data[field])) {
+                isValid = false;
+            }
         });
 
         return isValid;
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!value) {
             showError(field, 'Заполните поле');
-        isValid = false;
+            isValid = false;
         } else if (field === 'email' && !validateEmail(value)) {
             showError(field, 'Ошибка: Некорректный формат почты');
             isValid = false;

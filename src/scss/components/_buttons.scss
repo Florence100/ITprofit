@@ -1,0 +1,29 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+button {
+    width: $button_width_large;
+    max-width: $button_max_width;
+    padding: $button_padding_large;
+    font-size: $button_font_size_large;
+    background: $button_color;
+    transition: all $transition_time ease;
+    color: $button_text_color;
+    border-radius: 0.5rem;
+
+    &:hover {
+        background: $button_hover_color;
+    }
+
+    @media (max-width: $breakpoint_medium) {
+        width: $button_width_base;
+        padding: $button_padding_base;
+        font-size: $button_font_size_base;
+    }
+
+    @media (max-width: $breakpoint_small) {
+        width: $button_width_small;
+        padding: $button_padding_small;
+        font-size: $button_font_size_small;
+    }
+}

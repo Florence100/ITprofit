@@ -1,6 +1,11 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-}
+@use 'abstracts/functions';
+@use 'abstracts/animations';
+@use 'abstracts/mixins';
+@use 'abstracts/variables';
+
+@use 'base/reset';
+@use 'base/base';
+
+@use 'components/buttons';
+@use 'components/forms';
+@use 'components/modals';
