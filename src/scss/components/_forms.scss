@@ -58,3 +58,12 @@ form {
         }
     }
 }
+
+.form-message {
+    height: 1.5rem;
+    margin-top: $spacing_small;
+
+    @media (max-width: $breakpoint_medium) {
+        text-align: center;
+    }
+}

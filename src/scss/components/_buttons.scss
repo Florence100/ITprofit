@@ -11,8 +11,13 @@ button {
     color: $button_text_color;
     border-radius: 0.5rem;
 
-    &:hover {
+    &:hover,
+    &:focus {
         background: $button_hover_color;
+    }
+
+    &:focus {
+        outline: none;
     }
 
     @media (max-width: $breakpoint_medium) {
