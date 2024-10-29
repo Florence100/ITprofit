@@ -1,0 +1,17 @@
+@keyframes fadeInFromNone {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes center-slide-down {
+    from {
+        transform: translateY(-50vh) translateX(-50%);
+    }
+    to {
+        transform: translateY(-50%) translateX(-50%);
+    }
+}

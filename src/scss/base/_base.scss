@@ -1,0 +1,69 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+html {
+    font-size: 16px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: $bg_color;
+    font-size: 1rem;
+    color: $text_color;
+    line-height: $line_height_base;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    @media (max-width: $breakpoint_small) {
+        line-height: $line_height_small;
+    }
+}
+
+section {
+    @include flex-center;
+
+    &.feedback {
+        background-color: $secondary_bg_color;
+    }
+
+    @media (max-width: $breakpoint_medium) {
+        &.modal-section .content {
+            align-items: center
+        }
+    }
+}
+
+.content {
+    @include flex-column;
+    width: $content-width;
+    max-width: 100%;
+    padding: $spacing_xlarge 0;
+    
+    @media (max-width: $breakpoint_large) {
+        padding: $spacing_large 0;
+    }
+    
+    @media (max-width: $breakpoint_medium) {
+        padding: $spacing_medium 0;
+    }
+    
+    @media (max-width: $breakpoint_small) {
+        width: $content_width_small;
+        padding: $spacing_small;
+    }
+}
+
+h3 {
+    font-size: $font_size_xxlarge;
+
+    @media (max-width: $breakpoint_medium) {
+        font-size: $font_size_xlarge;
+        text-align: center;
+    }
+
+    @media (max-width: $breakpoint_small) {
+        font-size: $font_size_large;
+    }
+}

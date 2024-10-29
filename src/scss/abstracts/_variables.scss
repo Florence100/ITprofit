@@ -1,0 +1,57 @@
+@use "functions" as *;
+
+$transition_time: 0.2s;
+$animation_time: $transition_time;
+$golden_ratio: 1.618;
+
+//Colors
+$bg_color: #ffffff;
+$secondary_bg_color: #f9f9f9;
+$text_color: #000000;
+$hint_color: #a4a5a6;
+$button_base_color: #1d6ab3;
+$button_color: linear-gradient(to right, lighter($button_base_color, 2), darker($button_base_color, 2));
+$button_hover_color: linear-gradient(to right, lighter($button_base_color, 1), darker($button_base_color, 1));
+$button_text_color: #ffffff;
+$error_color: #fd0037;
+
+//Font-sizes
+$font_size_small: 0.875rem; // 14px
+$font_size_base: 1rem; // 16px
+$font_size_large: 1.25rem; // 20px
+$font_size_xlarge: 1.5rem; // 24px
+$font_size_xxlarge: 2rem; // 32px
+
+//Spacings
+$spacing_xsmall: 0.5rem; // 8px
+$spacing_small: 1rem; // 16px
+$spacing_medium: 1.5rem; // 24px
+$spacing_large: 2rem; // 32px
+$spacing_xlarge: 3rem; // 48px
+
+//Row height
+$line_height_small: 1.2;
+$line_height_base: 1.5;
+
+//Breakpoints for media queries
+$breakpoint_small: 576px;
+$breakpoint_medium: 768px;
+$breakpoint_large: 1200px;
+$breakpoint_xlarge: 1400px;
+
+//Content width
+$content-width: calc(100% / $golden_ratio);
+$content_width_small: 100%;
+
+// Button sizes
+$button_max_width: 20rem;
+$button_width_small: 100%;
+$button_width_base: 16rem;
+$button_width_large: 20rem;
+
+$button_font_size_small: $font_size_small;
+$button_font_size_base: $font_size_base;
+$button_font_size_large: $font_size_large;
+$button_padding_small: $spacing_small;
+$button_padding_base: $spacing_small;
+$button_padding_large: $spacing_small $spacing_medium;

@@ -1,0 +1,68 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+form {
+    @include flex-column;
+    gap: $spacing_medium;
+
+    & .form-field {
+        position: relative;
+
+        &:has(.error) {
+            & .error-message {
+                height: 1rem;
+                width: 100%;
+                color: $error_color;
+                position: absolute;
+                bottom: -1rem;
+                left: 0;
+                font-size: $font_size_small;
+            }
+        }
+
+        & input,
+        & textarea {
+            width: 100%;
+            padding: $spacing_xsmall 0;
+            background-color: rgb(255, 255, 255, 0);
+            border-bottom: 1px solid $hint_color;
+            transition: all $transition_time ease;
+
+            &.error {
+                border-bottom: 1px solid $error_color;
+            }
+
+            &:focus:not(.error), 
+            &:hover:not(.error) {
+                border-bottom: 1px solid $text_color;
+            }
+
+            &::placeholder,
+            &::-webkit-input-placeholder,
+            &::-moz-placeholder {
+                color: $hint_color;
+            }
+        }
+    }
+
+    &.contact-form {
+        margin-top: $spacing_xlarge;
+
+        button {
+            margin-top: $spacing_medium;
+
+            @media (max-width: $breakpoint_medium) {
+                align-self: center;
+            }
+        }
+    }
+}
+
+.form-message {
+    height: 1.5rem;
+    margin-top: $spacing_small;
+
+    @media (max-width: $breakpoint_medium) {
+        text-align: center;
+    }
+}
