@@ -12,6 +12,7 @@ export default {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -19,8 +20,23 @@ export default {
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
-          'sass-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
         ],
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            sourceMaps: true,
+          },
+        },
       },
     ],
   },
@@ -34,5 +50,6 @@ export default {
   ],
   mode: 'development',
 };
+
 
 
