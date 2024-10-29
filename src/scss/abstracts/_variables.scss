@@ -1,6 +1,7 @@
 @use "functions" as *;
 
 $transition_time: 0.2s;
+$animation_time: $transition_time;
 $golden_ratio: 1.618;
 
 //Colors
@@ -41,9 +42,6 @@ $breakpoint_xlarge: 1400px;
 //Content width
 $content-width: calc(100% / $golden_ratio);
 $content_width_small: 100%;
-$content_max_width_medium: calc($breakpoint_medium / $golden_ratio);
-$content_max_width_large: calc($breakpoint_large / $golden_ratio);
-$content_max_width_xlarge: calc($breakpoint_xlarge / $golden_ratio);
 
 // Button sizes
 $button_max_width: 20rem;

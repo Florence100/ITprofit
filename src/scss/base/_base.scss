@@ -21,36 +21,38 @@ body {
     }
 }
 
-.content {
-    width: $content-width;
-    max-width: $content_max_width_xlarge;
-    padding: $spacing_xlarge;
-    
-    @media (max-width: $breakpoint_xlarge) {
-        max-width: $content_max_width_xlarge;
+section {
+    @include flex-center;
+
+    &.feedback {
+        background-color: $secondary_bg_color;
     }
+
+    @media (max-width: $breakpoint_medium) {
+        &.modal-section .content {
+            align-items: center
+        }
+    }
+}
+
+.content {
+    @include flex-column;
+    width: $content-width;
+    max-width: 100%;
+    padding: $spacing_xlarge 0;
     
     @media (max-width: $breakpoint_large) {
-        max-width: $content_max_width_large;
-        padding: $spacing_large;
+        padding: $spacing_large 0;
     }
     
     @media (max-width: $breakpoint_medium) {
-        max-width: $content_max_width_medium;
-        padding: $spacing_medium;
+        padding: $spacing_medium 0;
     }
     
     @media (max-width: $breakpoint_small) {
         width: $content_width_small;
-        max-width: $content_width_small;
         padding: $spacing_small;
     }
-}
-
-section {
-    @include flex-center;
-    @include flex-column;
-    background-color: $secondary_bg_color;
 }
 
 h3 {

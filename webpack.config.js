@@ -43,6 +43,7 @@ export default {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
+      inject: 'body',
     }),
     new MiniCssExtractPlugin({
       filename: 'styles.css',
@@ -50,6 +51,7 @@ export default {
   ],
   mode: 'development',
 };
+
 
 
 
