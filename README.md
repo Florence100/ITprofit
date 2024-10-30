@@ -14,7 +14,7 @@
 
 1. Start the project:
    ```bash
-   npm run start
+   npm run build
 3. Start the server:
    ```bash
    npm run server
